@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ConfigInterface } from 'swr';
+import { SWRConfiguration } from 'swr';
 import { HttpMethods } from '../../@types/requests-methods';
 
 export async function fetcher<TResponse = any>(
@@ -15,7 +15,7 @@ export async function fetcher<TResponse = any>(
   }
 }
 
-export const swrConfiguration: ConfigInterface<any, any, any> = {
+export const swrConfiguration: SWRConfiguration<any, any, any> = {
   fetcher,
   onError: (err) => {
     console.error(err);
