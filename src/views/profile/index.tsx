@@ -2,7 +2,7 @@ import { useSession } from 'next-auth/client';
 import Layout from '../../layout';
 
 const Profile = () => {
-  const [session, loading] = useSession();
+  const [session] = useSession();
 
   return (
     <Layout>
