@@ -5,13 +5,9 @@ import Providers from 'next-auth/providers';
 export default (req: NextApiRequest, res: NextApiResponse) =>
   NextAuth(req, res, {
     providers: [
-      Providers.IdentityServer4({
-        id: process.env.IdentityServer4_ID,
-        name: process.env.IdentityServer4_NAME,
-        scope: process.env.IdentityServer4_SCOPE,
-        domain: process.env.IdentityServer4_DOMAIN,
-        clientId: process.env.IdentityServer4_CLIENT_ID,
-        protection: 'pkce',
+      Providers.GitHub({
+        clientId: process.env.GITHUB_ID,
+        clientSecret: process.env.GITHUB_SECRET,
       }),
     ],
   });
