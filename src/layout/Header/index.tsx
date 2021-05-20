@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { signin, signout, useSession } from 'next-auth/client';
 
 const Header = () => {
-  const [session, loading] = useSession();
+  const [session] = useSession();
 
   return (
     <header>
