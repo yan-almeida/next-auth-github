@@ -7,15 +7,16 @@ const Layout = ({ children }: PropsWithChildren) => {
   const [loading] = useSession();
 
   if (loading) return <div>Redirecionando...</div>;
-  return (
-    <div>
-      <Header />
+  else
+    return (
+      <div>
+        <Header />
 
-      <DirectionalContainer>
-        <main>{children}</main>
-      </DirectionalContainer>
-    </div>
-  );
+        <DirectionalContainer>
+          <main>{children}</main>
+        </DirectionalContainer>
+      </div>
+    );
 };
 
 export default Layout;
